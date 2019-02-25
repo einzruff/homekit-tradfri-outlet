@@ -1,0 +1,24 @@
+{
+“bridge”: {
+“name”: “Homebridge”,
+“username: “CC:22:3D:E3:CE:32”,
+“port”: 51826,
+“pin”: “031-45-159”
+},
+
+“description”: “This is our Homebridge config file.”,  
+
+“accessories”: [  
+],  
+
+“platforms”: [  
+{  
+	“platform”: “IkeaTradfri”,  
+	“name”: “Tradfri”,  
+	“host”: “putYourHubIPHere”,  
+	“key”: “putYourSecurityKeyHere”,  
+	“ignoreBulbs”: true  
+}  
+]  
+
+}
