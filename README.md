@@ -58,8 +58,8 @@ Now, let’s make our config.json file that tells the homebridge program how to 
 > cd home/pi/.homebridge  
 > pico config.json  
 
-Insert the following into the file, change the stuff in the platform section like we discussed, then use the keyboard shortcuts at the end to write the file to the disk and exit Pico.	
-{
+Insert the following into the file, change the stuff in the platform section like we discussed, then use the keyboard shortcuts at the end to write the file to the disk and exit Pico.  
+`{
 	“bridge”: {
 		“name”: “Homebridge”,
 		“username: “CC:22:3D:E3:CE:32”,
@@ -81,7 +81,7 @@ Insert the following into the file, change the stuff in the platform section lik
 		“ignoreBulbs”: true
 	}
 	]
-}
+}`  
 Press Ctrl+O to write the file. Press Ctrl+x to exit Pico.
 
 ## Run Homebridge and Add outlet to Home App
