@@ -23,39 +23,39 @@ Set up your Pi
 ## Update Raspbian
 Once in SSH (or you’ve booted into the GUI and opened a terminal), 
 Update the default system packages (this can take a very long time initially, I recommend doing this via a terminal so you can see its progress. It prompted me to do the updates through the GUI and doing it that way took several hours with only a progress bar telling me what it was doing. This was connected via a LAN cable on a high speed connection too. So, I recommend doing it in a terminal the following way:
-	sudo apt-get update
-	sudo apt-get upgrade
+> sudo apt-get update  
+> sudo apt-get upgrade  
 
 ## Check Versions of NodeJS and g++
 According to https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi it wants us to now see if Node v4.3.2 or greater is installed and if the right version of g++ is installed. I can tell you that after updating the OS, as of 2/24/19, if you type ‘nodejs –v’ you’ll see that you have NodeJS version 8.15.0 (definitely higher than the needed 4.3.2. And if you type ‘g++ -v’ you’ll see at the bottom ‘gcc version 6.3.0..’  (definitely higher than the needed 4.9).  But if for some reason you don’t have high enough versions follow the link above to find out how to get those installed 
 
 ## Install Avahi and other Dependencies
-This is required by the mdns package in HAP-NodeJS library.
-	sudo apt-get install libavahi-compat-libdnssd-dev
+This is required by the mdns package in HAP-NodeJS library.  
+> sudo apt-get install libavahi-compat-libdnssd-dev  
 
 ## Install homebridge and homebridge-tradfri-plugin plugin
 Install homebridge globally in the following way. If you do it without these flags it will throw permission errors.
-	sudo npm install –g –unsafe-perm homebridge
+> sudo npm install –g –unsafe-perm homebridge  
 Now, you’ll be able to run homebridge. But, it will mention that you don’t have any plugins installed, so instead let’s go ahead and install “homebridge-tradfi-plugin” to get our Tradfri plugin going.
-	sudo npm install –g homebridge-tradfri-plugin
+> sudo npm install –g homebridge-tradfri-plugin  
 
 ## Install libcoap
 Ok, before we get started in editing the needed config.json file for homebridge, there’s one last dependency we need installed, and that is ‘libcoap’. These are my slightly altered instructions from https://www.npmjs.com/package/homebridge-tradfri-plugin
-	sudo apt-get install libtool
-	sudo apt-get install autoconf
-	git clone –recursive https://github.com/obgm/libcoap.git
-	cd libcoap
-	git checkout dtls
-	git submodule update –init –recursive
-	./autogen.sh
-	./configure –disable-documentation –disable-shared
-	make
-	sudo make install
+> sudo apt-get install libtool  
+> sudo apt-get install autoconf  
+> git clone –recursive https://github.com/obgm/libcoap.git  
+> cd libcoap  
+> git checkout dtls  
+> git submodule update –init –recursive  
+> ./autogen.sh  
+> ./configure –disable-documentation –disable-shared  
+> make  
+> sudo make install  
 
 ## Make our config.json file
 Now, let’s make our config.json file that tells the homebridge program how to set everything up. Make sure you find your Tradfri hub’s IP address (use Fast Resolver to find it) and its “SecurityKey” (this is shown on the bottom of the hub) and replace those in the platforms section (at “host” for the IP and “key” for the SecurityKey. Since, for this guide, we’re interested in getting the control outlet to work, we set the ignoreBulbs flag to true, because for the purpose of this guide, we’re just interested in the control outlet and not any bulbs we might already have connected to the hub. Note: Sometimes there is a common error having to do with “username” in the config.json file, if you get that, change one of the numbers in the username field and the error should go away”.  We’ll use Pico as our terminal text editor.
-	cd home/pi/.homebridge
-	pico config.json
+> cd home/pi/.homebridge  
+> pico config.json  
 
 Insert the following into the file, change the stuff in the platform section like we discussed, then use the keyboard shortcuts at the end to write the file to the disk and exit Pico.	
 {
