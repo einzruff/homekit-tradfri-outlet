@@ -89,7 +89,7 @@ Press Ctrl+O to write the file. Press Ctrl+x to exit Pico.
 Now, with everything configured, you can type ‘homebridge’ in the terminal and it should start without any errors. It will show a large QR code and a HomeKit code at the bottom. Load up your Home app on your iPhone and hit the plus button at the top right then “Add Accessory”. Center the camera over the QR code or enter the code in the terminal and viola! It will add your new Pi HomeKit hub. Then after that it adds the control outlet. Make sure to set which room you want them assigned to. You can now toggle the switch on and off! Use it in scenes or turn things off/on manually, your choice.
 
 ## SSH – Keep it running
-If you’ve been logging in with SSH to run homebridge, you may notice the hub turns off when you disconnect. To keep homebridge running in the background, even after you disconnect, you can do the following. Make sure tmux is installed
+If you’ve been logging in with SSH to run homebridge instead of with a monitor/TV, you may notice the hub turns off when you disconnect. To keep homebridge running in the background, even after you disconnect, you can do the following. Make sure tmux is installed
 > sudo apt-get install tmux
 * SSH into the Pi
 * Start tmux by typing 'tmux' into the shell
