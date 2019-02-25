@@ -10,7 +10,8 @@ A way that the Ikea Tradfri outlet can be connected to Apple Home/HomeKit
 * Ikea Tradfri Control Outlet (comes by itself or in a kit with an on/off switch as a control device)
 
 At the moment, 2/24/2019, HomeKit compatibility hasn’t officially been released for the Ikea Tradfri Control Outlet. Some versions of programs may have changed since then. I am not responsible for anything that results from using this guide, it is for informational purposes only. First make sure you’ve plugged your Ikea control outlet into a power outlet and you’ve connected it to a control device (on/off switch in the $14.99 kit or the 4-way dimmer switch you can buy separately). You do this by holding the control device right next to the outlet and hold its pairing button for more than 10 seconds. Keep the button held down while the light is flashing until it is solid. Once you do this, the Ikea Tradfri app should acknowledge your outlet in its app.
-Set up your Pi
+
+## Set up your Pi
 1. Make sure you’ve got an 8GB or larger microSD card to write Raspbian OS to.
 2. Go to https://www.raspberrypi.org/downloads/raspbian/ and download “Raspbian Stretch with desktop and recommended software” 1.9GB
 3. Unzip “2018-11-13-raspbian-stretch-full.zip”
