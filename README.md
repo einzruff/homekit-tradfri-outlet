@@ -59,29 +59,29 @@ Now, let’s make our config.json file that tells the homebridge program how to 
 > pico config.json  
 
 Insert the following into the file, change the stuff in the platform section like we discussed, then use the keyboard shortcuts at the end to write the file to the disk and exit Pico.  
-`{
-	“bridge”: {
-		“name”: “Homebridge”,
-		“username: “CC:22:3D:E3:CE:32”,
-		“port”: 51826,
-		“pin”: “031-45-159”
-	},
+{  
+	“bridge”: {  
+		“name”: “Homebridge”,  
+		“username: “CC:22:3D:E3:CE:32”,  
+		“port”: 51826,  
+		“pin”: “031-45-159”  
+	},  
 
-	“description”: “This is our Homebridge config file.”,
+	“description”: “This is our Homebridge config file.”,  
 
-	“accessories”: [
-	],
+	“accessories”: [  
+	],  
 
-	“platforms”: [
-	{
-		“platform”: “IkeaTradfri”,
-		“name”: “Tradfri”,
-		“host”: “putYourHubIPHere”,
-		“key”: “putYourSecurityKeyHere”,
-		“ignoreBulbs”: true
-	}
-	]
-}`  
+	“platforms”: [  
+	{  
+		“platform”: “IkeaTradfri”,  
+		“name”: “Tradfri”,  
+		“host”: “putYourHubIPHere”,  
+		“key”: “putYourSecurityKeyHere”,  
+		“ignoreBulbs”: true  
+	}  
+	]  
+}  
 Press Ctrl+O to write the file. Press Ctrl+x to exit Pico.
 
 ## Run Homebridge and Add outlet to Home App
