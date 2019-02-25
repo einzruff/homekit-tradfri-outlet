@@ -35,8 +35,9 @@ This is required by the mdns package in HAP-NodeJS library.
 
 ## Install homebridge and homebridge-tradfri-plugin plugin
 Install homebridge globally in the following way. If you do it without these flags it will throw permission errors.
-> sudo npm install –g –unsafe-perm homebridge
-Now, you’ll be able to run homebridge. But, it will mention that you don’t have any plugins installed, so instead let’s go ahead and install “homebridge-tradfi-plugin” to get our Tradfri plugin going.
+> sudo npm install –g –unsafe-perm homebridge  
+
+Now, you’ll be able to run homebridge. But, it will mention that you don’t have any plugins installed, so instead let’s go ahead and install “homebridge-tradfi-plugin” to get our Tradfri plugin going.  
 > sudo npm install –g homebridge-tradfri-plugin  
 
 ## Install libcoap
