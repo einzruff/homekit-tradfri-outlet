@@ -1,6 +1,8 @@
 # homekit-tradfri-outlet
 A way that the Ikea Tradfri outlet can be connected to Apple Home/HomeKit
 
+On 4/10/2019, Tradfri was updated and Control Outlets now natively work with HomeKit. My below solution had a 100% uptime until this update with HomeKit Control Outlet compatibility was released. Started 2/24/2019. You can now use your Raspberry Pi for other things :)
+
 ## Prerequisites:
 * Apple Home app is installed on your iPhone or iPad and setup.
 * Apple Home hub (AppleTV, HomePod, or iPad as a hub) and setup.
@@ -9,7 +11,7 @@ A way that the Ikea Tradfri outlet can be connected to Apple Home/HomeKit
 * PC
 * Ikea Tradfri Control Outlet (comes by itself or in a kit with an on/off switch as a control device)
 
-As of 2/24/2019, HomeKit compatibility hasn’t officially been released for the Ikea Tradfri Control Outlet. Some versions of programs may have changed since then. I am not responsible for anything that results from using this guide, it is for informational purposes only. First make sure you’ve plugged your Ikea control outlet into a power outlet and you’ve connected it to a control device (on/off switch in the $14.99 kit or the 4-way dimmer switch you can buy separately). You do this by holding the control device right next to the outlet and hold its pairing button for more than 10 seconds. Keep the button held down while the light is flashing until it is solid. Once you do this, the Ikea Tradfri app should acknowledge your outlet in its app.
+Some versions of programs in this solution may have changed since then. I am not responsible for anything that results from using this guide, it is for informational purposes only. First make sure you’ve plugged your Ikea control outlet into a power outlet and you’ve connected it to a control device (on/off switch in the $14.99 kit or the 4-way dimmer switch you can buy separately). You do this by holding the control device right next to the outlet and hold its pairing button for more than 10 seconds. Keep the button held down while the light is flashing until it is solid. Once you do this, the Ikea Tradfri app should acknowledge your outlet in its app.
 
 ## Set up your Pi
 1. Make sure you’ve got an 8GB or larger microSD card to write Raspbian OS to.
